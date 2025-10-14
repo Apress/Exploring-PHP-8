@@ -16,7 +16,7 @@ alias docker-php8.4='docker run -it --rm -p 8000:8000 -v "$PWD":/usr/src/myapp -
 alias dphp='docker-php8.4'
 ```
 
-Make sure the aliases are available - `$ dphp -v` will do the trick -, then take the source code for a spin.
+Make sure the aliases are available, `$ dphp -v` will do the trick, then take the source code for a spin.
 
 ```
 $ source ~/.bashrc

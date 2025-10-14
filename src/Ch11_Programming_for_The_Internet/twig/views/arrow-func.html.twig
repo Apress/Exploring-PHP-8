@@ -1,0 +1,8 @@
+{# views/arrow-func.html.twig #}
+{% set myFunc = (arg1, arg2) => "<li>cat: #{arg1}</li>\n<li>human: #{arg2}</li>" %}
+<ul>
+    {{ myFunc|invoke(cat, human) }}
+</ul>
+<ul>
+    {{ myFunc|invoke(cat, human)|raw }}
+</ul>

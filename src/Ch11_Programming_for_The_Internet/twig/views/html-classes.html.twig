@@ -1,0 +1,7 @@
+{# views/html-classes.html.twig #}
+<div class="{{ html_classes({
+    'errors': state.errors,
+    'focused': state.focused
+}, ...classList) }}">
+    Some content goes here.
+</div>

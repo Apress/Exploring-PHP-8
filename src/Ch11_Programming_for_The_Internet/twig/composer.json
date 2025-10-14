@@ -1,0 +1,16 @@
+{
+    "name": "exphp8/generate-with-twig",
+    "description": "Exploring PHP8 - Twig rendering examples",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Paul Tregoing",
+            "email": "punchybda@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "4.x-dev",
+        "twig/html-extra": "4.x-dev"
+    }
+}

@@ -1,0 +1,34 @@
+<?php
+
+$validHtml = <<<EOS
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Block level element demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>Top-level heading</h1>
+      <p>A simple demo of block level elements</p>
+      <div>
+        &#60;hgroup&#62; elements were deprecated in the HTML5 spec
+      </div>
+    </main>
+  </body>
+</html>
+EOS;
+
+$dom = Dom\HTMLDocument::createFromString($validHtml);
+
+$metaNodes = $dom->getElementsByTagName('meta');
+
+foreach ($metaNodes as $metaNode) {
+    if ($metaNode->nodeType === XML_ELEMENT_NODE) {
+        foreach ($metaNode->attributes as $attr) {
+            var_dump(get_class($attr));
+            var_dump($attr->name);
+            var_dump($attr->value);
+        }
+    }
+}

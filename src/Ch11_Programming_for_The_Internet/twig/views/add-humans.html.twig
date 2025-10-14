@@ -1,0 +1,7 @@
+{# views/add-humans.html.twig #}
+<div>
+  {% if cat == 'Jess' %}
+    {% set cat = add_humans(cat) %}
+  {% endif %}
+  <p>{{ cat }}</p>
+</div>

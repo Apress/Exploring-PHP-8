@@ -1,0 +1,11 @@
+{# views/control-structures.html.twig #}
+{% if renderA %}
+  <ul>
+    {% for member in family %}
+      <li>{{ member }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% if renderB %}
+  <p>Hello from B</p>
+{% endif %}

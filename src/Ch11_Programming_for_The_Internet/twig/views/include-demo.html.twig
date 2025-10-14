@@ -1,0 +1,12 @@
+{# views/include-demo.html.twig #}
+<!DOCTYPE html>
+<html>
+    {% set pageTitle = 'Twig include() demo.' %}
+    {{ include(
+        'inc/head.html.twig',
+        {title: pageTitle},
+        with_context: false,
+        ignore_missing: true
+    ) }}
+  <body></body>
+</html>

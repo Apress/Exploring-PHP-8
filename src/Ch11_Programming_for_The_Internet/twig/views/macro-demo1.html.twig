@@ -1,0 +1,9 @@
+{# views/macro-demo1.html.twig #}
+{% macro listItem(text) %}
+  <li>{{ text }}</li>
+{% endmacro %}
+<ul>
+  {% for item in ['Jess', 'Anna', 'Paul'] %}
+    {{ _self.listItem(item) }}
+  {% endfor %}
+</ul>

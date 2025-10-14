@@ -1,0 +1,16 @@
+<?php
+
+$determinist = "\x00\x44\x00\x65\x00\x74\x00\x65\x00\x72\x00\x6d"
+    . "\x00\x69\x00\x6e\x00\x69\x00\x73\x00\x74";
+$revisionist = "\x00\x52\x00\x65\x00\x76\x00\x69\x00\x73\x00\x69"
+    . "\x00\x6f\x00\x6e\x00\x69\x00\x73\x00\x74";
+
+$data = [$determinist, $revisionist];
+mb_convert_variables(
+    'UTF-8',
+    'UTF-16BE',
+    $data
+);
+print bin2hex($data[0]) . PHP_EOL;
+print bin2hex($data[1]);
+print PHP_EOL;

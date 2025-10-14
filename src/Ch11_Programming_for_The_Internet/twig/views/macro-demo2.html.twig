@@ -1,0 +1,7 @@
+{# views/macro-demo2.html.twig #}
+{% import 'inc/macro.html.twig' as macros %}
+<ul>
+    {% for item in ['Jess', 'Anna', 'Paul'] %}
+        {{ macros.listItem(item) }}
+    {% endfor %}
+</ul>

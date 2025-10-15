@@ -1,33 +1,16 @@
-# Exploring PHP 8 - Paul Tregoing
+# Apress Source Code
 
-## Building Images
+This repository accompanies [*Exploring PHP 8*](https://www.link.springer.com/book/979-8-8688-2136-3) by Paul Tregoing (Apress, 2025).
 
-```
-$ cd docker/8.4
-$ docker build -t paultregoing/ex-php:8.4-cli .
-```
+[comment]: #cover
+![Cover image](979-8-8688-2135-6.jpg)
 
-## Command Aliases
+Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
-To save on typing (and RSI) add the following to your `~/.bashrc` file (or equivalent):
+## Releases
 
-```
-alias docker-php8.4='docker run -it --rm -p 8000:8000 -v "$PWD":/usr/src/myapp -w /usr/src/myapp paultregoing/ex-php:8.4-cli php'
-alias dphp='docker-php8.4'
-```
+Release v1.0 corresponds to the code in the published book, without corrections or updates.
 
-Make sure the aliases are available, `$ dphp -v` will do the trick, then take the source code for a spin.
+## Contributions
 
-```
-$ source ~/.bashrc
-$ cd ../src/Ch01_Getting_Started
-$ dphp 05.01_which_sapi.php
-```
-
-## Other useful docker commands for .bashrc
-
-```
-alias docker-phpcs='docker run --rm -v $(pwd):/data cytopia/phpcs'
-alias docker-composer='docker run --rm --interactive --tty --volume $PWD:/app composer'
-alias docker-node='docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app -w /usr/src/app node:19-bullseye node'
-```
+See the file Contributing.md for more information on how you can contribute to this repository.
